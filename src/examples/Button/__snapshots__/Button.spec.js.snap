@@ -1,8 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
-<Button
-  className="className"
-  label="My Button"
-/>
-`;
+exports[`Button renders correctly 1`] = `"<button class=\\"className\\">My Button</button>"`;

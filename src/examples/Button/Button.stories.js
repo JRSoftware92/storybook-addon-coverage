@@ -1,7 +1,16 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 
 import Button from './Button';
 
-storiesOf('Example Components', module)
-  .add('Button', () => <Button label="My Button" />);
+export default {
+  title: 'Examples/Button',
+  component: Button,
+};
+
+export const SimpleButton = () => <Button label="My Button" />;
+
+SimpleButton.story = {
+  parameters: {
+    coverageFiles: ['Button.js'],
+  },
+};

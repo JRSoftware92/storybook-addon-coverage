@@ -5,6 +5,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:with-reports": "react-scripts test --json --outputFile=jest-report.json --watchAll=false --collectCoverage",
     "eject": "react-scripts eject",
     "storybook": "start-storybook"
   },
@@ -17,10 +18,30 @@
     "react-scripts": "3.4.1"
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.18"
+    "@storybook/react": "^5.3.18",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.{spec,test}.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/**/*.{story,stories}.js",
+      "!src/test/**/*",
+      "!src/stories/**/*",
+      "!src/setupTests.js"
+    ],
+    "coverageReporters": [
+      "json",
+      "json-summary",
+      "text",
+      "text-summary",
+      "lcov"
+    ]
   },
   "browserslist": {
     "production": [
