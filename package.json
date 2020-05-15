@@ -1,7 +1,9 @@
 {
   "name": "@storybook/addon-coverage",
+  "description": "A Storybook Addon for displaying test coverage alongside stories",
   "version": "0.1.0",
   "license": "MIT",
+  "main": "index.js",
   "homepage": "https://github.com/JRSoftware92/storybook-addon-coverage",
   "bugs": {
     "url": "https://github.com/JRSoftware92/storybook-addon-coverage/issues"
@@ -11,8 +13,6 @@
     "url": "https://github.com/JRSoftware92/storybook-addon-coverage.git"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "test:with-reports": "react-scripts test --json --outputFile=jest-report.json --watchAll=false --collectCoverage",
     "eject": "react-scripts eject",

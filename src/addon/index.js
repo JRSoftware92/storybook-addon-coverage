@@ -48,3 +48,5 @@ export const withCoverage = (userOptions) => {
     return storyFn();
   };
 };
+
+export default withCoverage;
