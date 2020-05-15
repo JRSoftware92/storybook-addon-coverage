@@ -1,0 +1,50 @@
+.standard-margin {
+    margin: 16px 8px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+th {
+    padding: 8px;
+    font-weight: bold;
+}
+
+td {
+    padding: 8px;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-coverage {
+    border: 1px solid;
+}
+
+.table-header-coverage {
+    background-color: #ebebeb;
+}
+
+.header-coverage-section {
+    font-size: 18px;
+}
+
+.coverage-complete {
+    background-color: #adff7d;
+}
+
+.coverage-partial {
+    background-color: #ffee78;
+}
+
+.coverage-none {
+    background-color: lightcoral;
+}
