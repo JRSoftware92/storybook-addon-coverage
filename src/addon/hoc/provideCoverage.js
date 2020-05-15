@@ -3,7 +3,7 @@ import { STORY_CHANGED } from '@storybook/core-events';
 
 import { ADD_COVERAGE } from '../constants';
 
-const provideTests = (Component) => class TestProvider extends ReactComponent {
+const provideCoverage = (Component) => class TestProvider extends ReactComponent {
   state = {};
 
   static defaultProps = {
@@ -44,4 +44,4 @@ const provideTests = (Component) => class TestProvider extends ReactComponent {
   }
 };
 
-export default provideTests;
+export default provideCoverage;
