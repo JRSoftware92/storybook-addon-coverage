@@ -1,5 +1,6 @@
 {
   "name": "@storybook/addon-coverage",
+  "private": true,
   "description": "A Storybook Addon for displaying test coverage alongside stories",
   "version": "0.1.0",
   "license": "MIT",
