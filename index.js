@@ -1,0 +1,1 @@
+exports.withCoverage = require('./src');

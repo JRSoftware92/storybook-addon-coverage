@@ -1,5 +1,5 @@
 import { addDecorator } from '@storybook/react';
-import { withCoverage } from '../src/addon';
+import { withCoverage } from '../src';
 
 const checkCoverageReport = () => {
   try {
