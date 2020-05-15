@@ -11,12 +11,12 @@ const getClassNameByPercent = (percent, passThreshold, failThreshold) => {
 };
 
 const CoverageRow = ({ label, passThreshold, failThreshold, rowData: { total, covered, skipped, pct } }) => (
-  <tr className={getClassNameByPercent(pct, passThreshold, failThreshold)}>
-    <td className="bold">{label}</td>
-    <td>{covered}</td>
-    <td className={skipped ? 'bold' : ''}>{skipped}</td>
-    <td>{total}</td>
-    <td>{pct}%</td>
+  <tr id={`coverage-row-${label}`} className={getClassNameByPercent(pct, passThreshold, failThreshold)}>
+    <td id="cell-label" className="bold">{label}</td>
+    <td id="cell-covered">{covered}</td>
+    <td id="cell-skipped" className={skipped ? 'bold' : ''}>{skipped}</td>
+    <td id="cell-total">{total}</td>
+    <td id="cell-pct">{pct}%</td>
   </tr>
 );
 

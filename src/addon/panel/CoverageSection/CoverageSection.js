@@ -9,10 +9,10 @@ const CoverageSection = ({ failThreshold, passThreshold, coverageEntry }) => {
     return null;
   }
   return (
-    <div className="standard-margin">
+    <div id={`coverage-section${fileName}`} className="standard-margin">
       <>
         <span className="header-coverage-section bold">{fileName}</span>
-        <CoverageTable failThreshold={failThreshold} passThreshold={passThreshold} tableData={result} />
+        <CoverageTable fileName={fileName} failThreshold={failThreshold} passThreshold={passThreshold} tableData={result} />
       </>
     </div>
   );
