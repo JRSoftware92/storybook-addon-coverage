@@ -8,7 +8,7 @@ export default {
 };
 
 const parameters = {
-  coverageFiles: ['CoverageRow.js'],
+  coverageFiles: ['CoverageRow.js', 'CoverageSection.js', 'CoverageTable.js', 'CoveragePanel.js'],
 };
 
 const getCoverageRowData = (covered = 0, skipped = 0, total = 0, pct = 0) => ({

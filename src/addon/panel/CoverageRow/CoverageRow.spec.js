@@ -19,13 +19,13 @@ const props = {
   rowData,
 };
 
-describe('CoverageRow', () => {
-  test('renders correctly for partial coverage', () => {
+describe('Coverage Table Row', () => {
+  test('displays a yellow background for partial coverage', () => {
     const wrapper = getWrapper(props);
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('renders correctly for passing coverage', () => {
+  test('displays a green background for passing coverage', () => {
     const wrapper = getWrapper({
       ...props,
       rowData: {
@@ -36,12 +36,23 @@ describe('CoverageRow', () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  test('renders correctly for failing coverage', () => {
+  test('displays a red background for failing coverage', () => {
     const wrapper = getWrapper({
       ...props,
       rowData: {
         ...rowData,
         pct: 0,
+      }
+    });
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+
+  test('bolds skipped entries', () => {
+    const wrapper = getWrapper({
+      ...props,
+      rowData: {
+        ...rowData,
+        skipped: 1,
       }
     });
     expect(wrapper.html()).toMatchSnapshot();

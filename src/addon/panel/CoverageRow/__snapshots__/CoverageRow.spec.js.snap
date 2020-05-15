@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CoverageRow renders correctly for failing coverage 1`] = `"<tr class=\\"coverage-none\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>0%</td></tr>"`;
+exports[`Coverage Table Row bolds skipped entries 1`] = `"<tr id=\\"coverage-row-Row Label\\" class=\\"coverage-partial\\"><td id=\\"cell-label\\" class=\\"bold\\">Row Label</td><td id=\\"cell-covered\\">3</td><td id=\\"cell-skipped\\" class=\\"bold\\">1</td><td id=\\"cell-total\\">3</td><td id=\\"cell-pct\\">70%</td></tr>"`;
 
-exports[`CoverageRow renders correctly for partial coverage 1`] = `"<tr class=\\"coverage-partial\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>70%</td></tr>"`;
+exports[`Coverage Table Row displays a green background for passing coverage 1`] = `"<tr id=\\"coverage-row-Row Label\\" class=\\"coverage-complete\\"><td id=\\"cell-label\\" class=\\"bold\\">Row Label</td><td id=\\"cell-covered\\">3</td><td id=\\"cell-skipped\\" class=\\"\\">0</td><td id=\\"cell-total\\">3</td><td id=\\"cell-pct\\">100%</td></tr>"`;
 
-exports[`CoverageRow renders correctly for passing coverage 1`] = `"<tr class=\\"coverage-complete\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>100%</td></tr>"`;
+exports[`Coverage Table Row displays a red background for failing coverage 1`] = `"<tr id=\\"coverage-row-Row Label\\" class=\\"coverage-none\\"><td id=\\"cell-label\\" class=\\"bold\\">Row Label</td><td id=\\"cell-covered\\">3</td><td id=\\"cell-skipped\\" class=\\"\\">0</td><td id=\\"cell-total\\">3</td><td id=\\"cell-pct\\">0%</td></tr>"`;
+
+exports[`Coverage Table Row displays a yellow background for partial coverage 1`] = `"<tr id=\\"coverage-row-Row Label\\" class=\\"coverage-partial\\"><td id=\\"cell-label\\" class=\\"bold\\">Row Label</td><td id=\\"cell-covered\\">3</td><td id=\\"cell-skipped\\" class=\\"\\">0</td><td id=\\"cell-total\\">3</td><td id=\\"cell-pct\\">70%</td></tr>"`;
