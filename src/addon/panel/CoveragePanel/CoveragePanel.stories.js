@@ -11,16 +11,6 @@ const parameters = {
   coverageFiles: ['CoverageRow.js'],
 };
 
-export const WithoutCoverageData = () => (
-  <CoveragePanel
-    failThreshold={50}
-    passThreshold={80}
-    coverageData={[{fileName: 'noCoverage.js'}]}
-  />
-);
-
-WithoutCoverageData.story = { parameters };
-
 const getCoverageRowData = (covered = 0, skipped = 0, total = 0, pct = 0) => ({
   pct, total: 1, covered: 0, skipped: 0,
 });

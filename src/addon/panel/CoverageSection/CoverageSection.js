@@ -4,18 +4,16 @@ import CoverageTable from '../CoverageTable/CoverageTable';
 
 const CoverageSection = ({ failThreshold, passThreshold, coverageEntry }) => {
   const { fileName, result } = coverageEntry;
+  if (!result) {
+    console.warn(`Warning: No Coverage found for ${fileName}. Coverage table not rendered.`);
+    return null;
+  }
   return (
     <div className="standard-margin">
-      {
-        result ? (
-          <>
-            <span className="header-coverage-section bold">{fileName}</span>
-            <CoverageTable failThreshold={failThreshold} passThreshold={passThreshold} tableData={result} />
-          </>
-        ) : (
-          <div>No Coverage Data Found for {fileName}</div>
-        )
-      }
+      <>
+        <span className="header-coverage-section bold">{fileName}</span>
+        <CoverageTable failThreshold={failThreshold} passThreshold={passThreshold} tableData={result} />
+      </>
     </div>
   );
 };
