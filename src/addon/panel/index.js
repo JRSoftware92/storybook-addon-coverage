@@ -2,40 +2,14 @@ import React from 'react';
 import { ScrollArea, Placeholder } from '@storybook/components';
 
 import provideCoverage from '../hoc/provideCoverage';
-import CoverageSection from './CoverageSection/CoverageSection';
+import CoveragePanel from './CoveragePanel/CoveragePanel';
 
-import './panel.css';
-
-const Content = ({ failThreshold, passThreshold, coverageData }) => {
-  if (coverageData && coverageData.length) {
-    return (
-      <div className="contentBox">
-        {
-          coverageData.map((coverageEntry, key) => (
-            <CoverageSection
-              key={key}
-              failThreshold={failThreshold}
-              passThreshold={passThreshold}
-              coverageEntry={coverageEntry}
-            />
-          ))
-        }
-      </div>
-    );
-  }
-
-  return (
-    <Placeholder>
-      <div>No Coverage Data Found</div>
-    </Placeholder>
-  );
-};
-
-export const CoveragePanel = ({ failThreshold, passThreshold, coverageData }) => {
+export const WrappedCoveragePanel = ({ failThreshold, passThreshold, coverageData }) => {
+  const hasCoverageData = coverageData && coverageData.length;
   return (
     <ScrollArea vertical>
-      {coverageData ? (
-        <Content failThreshold={failThreshold} passThreshold={passThreshold} coverageData={coverageData} />
+      {hasCoverageData ? (
+        <CoveragePanel failThreshold={failThreshold} passThreshold={passThreshold} coverageData={coverageData} />
       ) : (
           <Placeholder>
             <div>No Coverage Data Found</div>
@@ -45,4 +19,4 @@ export const CoveragePanel = ({ failThreshold, passThreshold, coverageData }) =>
   );
 };
 
-export default provideCoverage(CoveragePanel);
+export default provideCoverage(WrappedCoveragePanel);

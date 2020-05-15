@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoverageRow renders correctly for failing coverage 1`] = `"<tr class=\\"coverage-none\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>0%</td></tr>"`;
+
+exports[`CoverageRow renders correctly for partial coverage 1`] = `"<tr class=\\"coverage-partial\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>70%</td></tr>"`;
+
+exports[`CoverageRow renders correctly for passing coverage 1`] = `"<tr class=\\"coverage-complete\\"><td class=\\"bold\\">Row Label</td><td>3</td><td class=\\"\\">0</td><td>3</td><td>100%</td></tr>"`;
