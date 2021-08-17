@@ -1,5 +1,9 @@
 # Storybook Coverage Addon
 
+****
+
+![Coverage Addon Screenshot](./assets/demo.JPG)
+
 This module provides an addon for Storybook which displays generated coverage reports inside an Addon tab.
 Currently this module only supports jest coverage reports.
 
